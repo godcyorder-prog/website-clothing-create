@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#b62419", "inverse-surface": "#2f312f", "error-container": "#ffdad6", "surface-container-highest": "#e3e2df", "background": "#faf9f6", "surface-container-lowest": "#ffffff", "primary": "#000000", "on-tertiary-fixed-variant": "#244f31", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#c4c7c7", "primary-container": "#1c1b1b", "on-primary": "#ffffff", "on-secondary-container": "#5c0000", "on-background": "#1a1c1a", "surface": "#faf9f6", "tertiary-container": "#00210c", "primary-fixed": "#e5e2e1", "surface-container-low": "#f4f3f0", "inverse-on-surface": "#f2f1ee", "inverse-primary": "#c8c6c5", "secondary-fixed-dim": "#ffb4a8", "tertiary-fixed-dim": "#a2d2aa", "on-tertiary-fixed": "#00210c", "on-surface-variant": "#444748", "on-secondary-fixed": "#410000", "surface-container": "#efeeeb", "on-error": "#ffffff", "on-primary-fixed": "#1c1b1b", "on-error-container": "#93000a", "on-primary-container": "#858383", "on-surface": "#1a1c1a", "primary-fixed-dim": "#c8c6c5", "surface-dim": "#dbdad7", "on-secondary-fixed-variant": "#930303", "surface-container-high": "#e9e8e5", "outline": "#747878", "surface-tint": "#5f5e5e", "on-primary-fixed-variant": "#474746", "surface-variant": "#e3e2df", "secondary-fixed": "#ffdad5", "on-tertiary-container": "#618e6a", "secondary-container": "#fd5845", "surface-bright": "#faf9f6", "tertiary": "#000000", "tertiary-fixed": "#bdeec5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1.5rem", "space-xl": "4rem", "space-2xl": "6rem", "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "2rem", "gutter-desktop": "2.5rem", "margin-tablet": "2.5rem", "space-md": "1rem", "margin-desktop": "5rem", "space-xs": "0.25rem" }, fontFamily: { "price-md": ["Inter"], "headline-md": ["Playfair Display"], "price-lg": ["Inter"], "headline-lg": ["Playfair Display"], "display-xl-mobile": ["Playfair Display"], "label-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["Inter"], "display-xl": ["Playfair Display"], "title-md": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "price-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "price-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "300" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "300" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.18em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf9f6;color:#1a1c1a;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl"><div class="bg-primary text-on-primary py-1 px-4 text-center"><p class="font-label-sm text-label-sm tracking-widest uppercase">FREE SHIPPING ON ORDERS ABOVE ₹1999</p></div><div class="h-20 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" id="menu-open-btn"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="Zaria Atelier Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WOWYRZI25iyZyBWqYp_iD-OxEexzU0GFvTHEM4eQtTNpr_OrBSQ-_i7NjdrZQxgw0kbLAMRHzdRn3UkSynJq8gvvKUW1jHMHS2J73i_DGze2YZqz13EMEdB7ITsEleMAeDCQzkJpWbHD2-jZriW5FlU2ikJat-NNH7B7jQDUfUlaHEI6G-M7tEfnEVkpya4Jpm2uaUPobBI066lEkmBp5AXE2KTLeERnz1RwqjRgPZVxLE3A48LSBhZA"/><span class="font-headline-md text-headline-md tracking-widest uppercase ml-1 hidden sm:inline-block">ZARIA</span></div><div class="flex items-center"><span class="font-label-lg text-label-lg tracking-wider text-on-surface-variant uppercase hidden md:inline-block mr-space-md">Wishlist</span><button aria-label="Search Products" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" id="search-open-btn"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="Wishlist" class="w-11 h-11 relative flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></a><button aria-label="Shopping Cart with 2 items" class="h-11 px-space-xs flex items-center gap-1.5 text-on-surface hover:text-on-surface-variant transition-colors" id="cart-open-btn"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="font-label-sm text-label-sm font-medium tracking-normal">(2)</span></button><div class="ml-1 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK_TgvI0Oq57M8f12qN3i-2X8rfVP5JR5Lj5TZ5grEZFCTr3F5MydTYsinoWMmZsQP4xVkqMPv3cUS2lPWij0qLBATAdefbhpvJMOr70It0mMT-YutJtw_tf5f_Wo5YwyL0TPBAlv2TmR9iBkB9AC0ype4Pa4-7Bn5YxJN1MxbTbdr86o9XCuxXYpcTn3cO68I1sKNEobzxPQccpNm4qhR1kudk8zebKvvVkavXBKA2GmR9BXhJ4A"/></div></div></div></header><main class="flex flex-col relative w-full pt-20 bg-surface min-h-screen pb-20"><div class="flex flex-col w-full">
+<!-- Progress & Free Shipping Banner -->
+<div class="px-margin pt-space-xs pb-space-sm">
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Unlocked! Free Standard Shipping</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">₹1,999 Target Met</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<!-- Header Section -->
+<div class="px-margin py-space-xs flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<h2 class="font-headline-md text-headline-md tracking-wide text-on-surface">Your Shopping Bag</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">(2)</span>
+</div>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Atelier Curations</span>
+</div>
+<!-- Cart Items List -->
+<div class="px-margin flex flex-col gap-space-sm pt-space-xs">
+<!-- Item 1: Aubree Maxi Dress -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex gap-space-sm shadow-sm relative overflow-hidden" id="cart-item-1">
+<div class="w-24 h-32 rounded-lg overflow-hidden bg-surface-container-low shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Model wearing Aubree Ivory Floral printed flowy cotton silk maxi dress in sunlit artisanal courtyard, serene natural lighting, muted ivory and blush palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMThrNLNOA1e3EJXMwNdHp-h12gH0dDRr4ncQ8QjS0XB3ihaXga9kdsGbAwcqDa71yMz-6cidkUSv6wozFsYXaK2E0d1Zvuo6MYElckd2Zspy6NNTS_FNLT8e9Bll3DeHbPMzbyBR1sSqRJok5PX61_GGDGHvQnQ-fYkeXYG7CSCrOWQkeLkK7mtBldwr4fH78MlNp0vCNwP3ZMbbQFVer87LjCnIEpXNKQcf7nj09A6v1KjS7zCU"/>
+<span class="absolute top-1.5 left-1.5 bg-secondary text-on-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded uppercase tracking-wider font-semibold">74% OFF</span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex flex-col">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[17px] text-on-surface truncate pr-1">Aubree Maxi Dress</h3>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-0.5" onclick="removeItem('cart-item-1', 699)">
+<span class="material-symbols-outlined text-[19px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Size: M  •  Color: Ivory Floral</p>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-price-md text-price-md text-on-surface font-semibold">₹699</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹2,699</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shadow-inner">
+<button aria-label="Decrease quantity" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container-lowest rounded transition-colors" onclick="updateQty('qty-1', -1)">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-price-md text-price-md px-2.5 text-on-surface select-none" id="qty-1">1</span>
+<button aria-label="Increase quantity" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container-lowest rounded transition-colors" onclick="updateQty('qty-1', 1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-colors" onclick="moveToWishlist('cart-item-1')">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+<span>Save</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Solid Green Pure Linen Dress -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex gap-space-sm shadow-sm relative overflow-hidden" id="cart-item-2">
+<div class="w-24 h-32 rounded-lg overflow-hidden bg-surface-container-low shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Chic elegant Forest Sage solid pure linen dress with minimal artisanal wooden buttons, draped texture in warm natural indoor daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqsntYABxOMHfVt5eDsNAWUEdCimZjwVkG0BxpX0yLhuv-Wf--YFFJpHwP60MzitzPFw1mi05DFR-hxHdsZZ974gEjUHp-s2Pjo_R0FuSzQqqpmnVaXo-EExINQ2tB82PUOkjXaGNkoBOf_fZ41voLrpbEhouwa4v1MADPF2ESB-_CyEwfWKkYuFGHJ1Om2RPlgLFKjfN_rKyXzuGkGkIH_dOtuml33i6QS2Og19KFyaNd8vgBWgQ"/>
+<span class="absolute top-1.5 left-1.5 bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded uppercase tracking-wider font-medium">Pure Linen</span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex flex-col">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[17px] text-on-surface truncate pr-1">Solid Green Pure Linen Dress</h3>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-0.5" onclick="removeItem('cart-item-2', 4699)">
+<span class="material-symbols-outlined text-[19px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Size: S  •  Color: Forest Sage</p>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-price-md text-price-md text-on-surface font-semibold">₹4,699</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">Bespoke Weave</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shadow-inner">
+<button aria-label="Decrease quantity" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container-lowest rounded transition-colors" onclick="updateQty('qty-2', -1)">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-price-md text-price-md px-2.5 text-on-surface select-none" id="qty-2">1</span>
+<button aria-label="Increase quantity" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container-lowest rounded transition-colors" onclick="updateQty('qty-2', 1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-colors" onclick="moveToWishlist('cart-item-2')">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+<span>Save</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Coupon & Promo Section -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-2.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-secondary">local_activity</span>
+          Apply Atelier Coupon
+        </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">1 Active</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex-1 bg-surface-container-low rounded-lg px-3 py-2 flex items-center gap-2">
+<input class="bg-transparent font-title-md text-[13px] text-on-surface uppercase tracking-wider w-full focus:outline-none placeholder:text-outline font-medium" id="coupon-input" placeholder="Enter promo code" type="text" value="ZARIA10"/>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-variant hover:text-primary transition-colors" id="apply-btn" onclick="toggleCoupon()">
+          Applied
+        </button>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-lg" id="coupon-badge">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm text-on-surface"><span class="font-semibold text-on-surface">ZARIA10</span> applied (10% extra festive savings)</p>
+</div>
+<button aria-label="Remove coupon" class="text-on-surface-variant hover:text-error text-xs font-semibold uppercase" onclick="removeCoupon()">Remove</button>
+</div>
+</div>
+</div>
+<!-- Customers Also Added (Quick Add Carousel) -->
+<div class="pt-space-md flex flex-col">
+<div class="px-margin flex items-baseline justify-between mb-2">
+<div>
+<h4 class="font-headline-md text-[18px] text-on-surface">Customers Also Added</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted essentials that complete your look</p>
+</div>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Curated Pairings</span>
+</div>
+<div class="flex gap-space-sm overflow-x-auto px-margin pb-2 pt-1 no-scrollbar">
+<!-- Cross-sell Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xs w-48 shrink-0 shadow-sm flex flex-col justify-between">
+<div class="w-full h-36 rounded-lg overflow-hidden bg-surface-container-low relative">
+<img class="w-full h-full object-cover" data-alt="Pair of exquisite hand-carved sterling silver ghungroo anklets resting on pure raw mulberry silk textile, luxury jewelry detail close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1WBsGUGI_YBVqrM7q6mnpDDeR13rKh8-nwmvMCPdgdBNDOq_x07oDzxCcsZHauc01FW84WcLJFKg8YgqEz55e92RNxwvcK3IT7jZK-2g4gyiGyveLwXjIQBeJF5DqJQh2WlhoLzuiHax09r9lR9dZq3z7TVLP2q2qhWuRt2oaePuUjKxKJY1JeMFwiCYQstS_CpGVFVrR8yPoz2Davdgss4V0b8alMcg12EinMS7v8EK40JQJsv8"/>
+<span class="absolute top-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded tracking-wider uppercase">925 Silver</span>
+</div>
+<div class="flex flex-col pt-2 px-1">
+<h5 class="font-headline-md text-[14px] text-on-surface truncate">Silver Ghungroo Anklet</h5>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Sterling silver / Pair</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-price-md text-price-md text-on-surface font-semibold">₹499</span>
+<button class="bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-2.5 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider transition-colors flex items-center gap-1" onclick="quickAdd(this, 'Silver Anklet', 499)">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cross-sell Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xs w-48 shrink-0 shadow-sm flex flex-col justify-between">
+<div class="w-full h-36 rounded-lg overflow-hidden bg-surface-container-low relative">
+<img class="w-full h-full object-cover" data-alt="Set of three Mulberry Raw Silk hair scrunchies in ivory, emerald, and ruby tones neatly arranged on textured handcrafted paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4-6Fi7K2C06HwWL3ZrNhKikkRx0W1PudK9VSDc92aZgFo-xTEpJsLrMzutOXcS3e9WhN7BxKoNwAqmI04F-crJvMDHK-lfsC5u2iTd13aKbvoXJ7czRp7kPwVVgr8Zs-iXp2yhd5svDDoJzR90aptAvhc_Iv3gpHAyczVYsjB90MSaZbdI7r-l1dCdrlGP7GxDblQAJQDajobZiVgTQxIspwMga9V97dF54hXO7p2yRMFxxCTI4"/>
+<span class="absolute top-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded tracking-wider uppercase">Tussar Silk</span>
+</div>
+<div class="flex flex-col pt-2 px-1">
+<h5 class="font-headline-md text-[14px] text-on-surface truncate">Pure Silk Scrunchie Trio</h5>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Set of 3 jewel tones</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-price-md text-price-md text-on-surface font-semibold">₹899</span>
+<button class="bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-2.5 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider transition-colors flex items-center gap-1" onclick="quickAdd(this, 'Silk Scrunchie Set', 899)">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cross-sell Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xs w-48 shrink-0 shadow-sm flex flex-col justify-between">
+<div class="w-full h-36 rounded-lg overflow-hidden bg-surface-container-low relative">
+<img class="w-full h-full object-cover" data-alt="Delicate hand-embroidered Zardozi motif velvet pouch in champagne gold with raw silk tassels on marble pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJdKqBEi8AaHKTufVtUg1-L2KAfOBgZoD3uecsK7abEXRV-Wq3qkz6EjRPDbwkmW5IO9rEQ2CrbWd3g6WhrASRotMhEr-OM7d5KpZ2YSH0OqAkH6WN1nZHBj5IWBA89SbifqJMuXqJGX0zpAmQYKb00onQrTIUJFkBs8BRWlOCneeb614iXe4c3oJX2t4-cI08vsEwS79WyMKr0jNoYHTZT2wvuRB0zcfKTWmPZjwQVT9ngq6zJ2Y"/>
+<span class="absolute top-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded tracking-wider uppercase">Handmade</span>
+</div>
+<div class="flex flex-col pt-2 px-1">
+<h5 class="font-headline-md text-[14px] text-on-surface truncate">Zardozi Artisan Potli</h5>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Champagne / Handcrafted</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-price-md text-price-md text-on-surface font-semibold">₹1,250</span>
+<button class="bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-2.5 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider transition-colors flex items-center gap-1" onclick="quickAdd(this, 'Zardozi Potli', 1250)">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary Card -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col gap-3 shadow-sm">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-md text-[17px] text-on-surface tracking-wide">Order Summary</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Inclusive of Taxes</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Bag Total (2 items)</span>
+<span class="font-price-md text-price-md text-on-surface" id="bag-total">₹5,398</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-tertiary-container">
+<span class="flex items-center gap-1">
+<span>Festive Atelier Discount</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface">10%</span>
+</span>
+<span class="font-price-md text-price-md font-medium" id="bag-discount">-₹540</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Standard Delivery</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container uppercase font-semibold">FREE</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Luxury Artisan Packaging</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-medium">Complimentary</span>
+</div>
+</div>
+<!-- Separation line using subtle background shift container -->
+<div class="h-px bg-surface-container-high w-full my-1"></div>
+<div class="flex justify-between items-baseline">
+<div class="flex flex-col">
+<span class="font-headline-md text-[16px] text-on-surface">Estimated Total</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inclusive of all duties &amp; GST</span>
+</div>
+<span class="font-price-lg text-price-lg text-on-surface font-semibold" id="estimated-total">₹4,858</span>
+</div>
+</div>
+</div>
+<!-- Trust Badges & Safety Proofing -->
+<div class="px-margin pt-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-sm grid grid-cols-2 gap-2 shadow-inner">
+<div class="flex items-center gap-2 p-1.5">
+<span class="material-symbols-outlined text-[20px] text-on-surface">lock</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-medium text-on-surface leading-tight">100% Secure Checkout</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">UPI, Cards, NetBanking</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-1.5">
+<span class="material-symbols-outlined text-[20px] text-on-surface">payments</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-medium text-on-surface leading-tight">Pay on Delivery</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Cash / QR on Arrival</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-1.5">
+<span class="material-symbols-outlined text-[20px] text-on-surface">award_star</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-medium text-on-surface leading-tight">Artisan Handcrafted</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Verified Master Weavers</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-1.5">
+<span class="material-symbols-outlined text-[20px] text-on-surface">published_with_changes</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-medium text-on-surface leading-tight">Easy Returns</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">7 Days Doorstep Pick-up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating / Pinned Checkout Bar -->
+<div class="sticky bottom-16 z-40 bg-surface/95 backdrop-blur-md px-margin py-3 shadow-lg mt-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Payable:</span>
+<span class="font-price-md text-price-md font-semibold text-on-surface" id="sticky-total">₹4,858</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">Saved ₹540 today</span>
+</div>
+<a class="w-full h-12 bg-primary text-on-primary rounded-lg flex items-center justify-between px-5 font-label-lg text-label-lg uppercase tracking-widest hover:bg-surface-container-highest hover:text-primary transition-all duration-200" data-path="checkout-experience" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[19px]">lock</span>
+<span>Proceed to Checkout</span>
+</span>
+<span class="flex items-center gap-1">
+<span id="cta-price">₹4,858</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</a>
+</div>
+</div>
+<!-- Notification Toast for Delight (Hidden by default) -->
+<div class="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-primary text-on-primary px-4 py-2 rounded-full shadow-2xl font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none" id="toast">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">arrow_back_ios_new</span>
+<span id="toast-text">Item updated in your Atelier Bag</span>
+</div>
+</div>
+<script>
+  let currentTotal = 5398;
+  let hasDiscount = true;
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+    toastText.innerText = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+
+  function updateRecalculatedView() {
+    const discount = hasDiscount ? Math.round(currentTotal * 0.1) : 0;
+    const finalAmount = Math.max(0, currentTotal - discount);
+
+    const bagTotalEl = document.getElementById('bag-total');
+    const bagDiscountEl = document.getElementById('bag-discount');
+    const estTotalEl = document.getElementById('estimated-total');
+    const stickyTotalEl = document.getElementById('sticky-total');
+    const ctaPriceEl = document.getElementById('cta-price');
+
+    if (bagTotalEl) bagTotalEl.innerText = '₹' + currentTotal.toLocaleString('en-IN');
+    if (bagDiscountEl) bagDiscountEl.innerText = hasDiscount ? '-₹' + discount.toLocaleString('en-IN') : '₹0';
+    if (estTotalEl) estTotalEl.innerText = '₹' + finalAmount.toLocaleString('en-IN');
+    if (stickyTotalEl) stickyTotalEl.innerText = '₹' + finalAmount.toLocaleString('en-IN');
+    if (ctaPriceEl) ctaPriceEl.innerText = '₹' + finalAmount.toLocaleString('en-IN');
+  }
+
+  function updateQty(id, delta) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let qty = parseInt(el.innerText) + delta;
+    if (qty < 1) qty = 1;
+    el.innerText = qty;
+    showToast(`Quantity adjusted to ${qty}`);
+  }
+
+  function removeItem(itemId, price) {
+    const item = document.getElementById(itemId);
+    if (item) {
+      item.style.transition = 'all 0.3s ease';
+      item.style.opacity = '0';
+      item.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        item.remove();
+        currentTotal = Math.max(0, currentTotal - price);
+        updateRecalculatedView();
+        showToast('Item removed from Atelier Bag');
+      }, 300);
+    }
+  }
+
+  function moveToWishlist(itemId) {
+    const item = document.getElementById(itemId);
+    if (item) {
+      item.style.transition = 'all 0.3s ease';
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(-10px)';
+      setTimeout(() => {
+        item.remove();
+        showToast('Moved to Saved Sanctuary');
+      }, 300);
+    }
+  }
+
+  function toggleCoupon() {
+    const badge = document.getElementById('coupon-badge');
+    const btn = document.getElementById('apply-btn');
+    if (!hasDiscount) {
+      hasDiscount = true;
+      if (badge) badge.classList.remove('hidden');
+      if (btn) btn.innerText = 'Applied';
+      showToast('ZARIA10 festive discount activated');
+    }
+    updateRecalculatedView();
+  }
+
+  function removeCoupon() {
+    hasDiscount = false;
+    const badge = document.getElementById('coupon-badge');
+    const btn = document.getElementById('apply-btn');
+    if (badge) badge.classList.add('hidden');
+    if (btn) btn.innerText = 'Apply';
+    showToast('Coupon code removed');
+    updateRecalculatedView();
+  }
+
+  function quickAdd(btn, title, price) {
+    currentTotal += price;
+    updateRecalculatedView();
+    btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">check</span> Added`;
+    btn.classList.add('bg-primary', 'text-on-primary');
+    showToast(`${title} added to bag!`);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl" data-active-classes="text-primary font-medium"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="home-feed" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Atelier</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="collection-catalog" href="#"><span class="material-symbols-outlined text-[22px]">styler</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Couture</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="editorial-stories" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Stories</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 transition-all gap-0.5 text-primary font-medium" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite_border</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Saved</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="boutique-profile" href="#"><span class="material-symbols-outlined text-[22px]">person_outline</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Account</span></a></div></nav><aside class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none" id="nav-drawer"><div class="fixed inset-y-0 left-0 w-full max-w-sm bg-surface-container-lowest flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-out shadow-2xl" id="drawer-panel"><div class="flex flex-col h-full overflow-y-auto pt-safe pb-space-lg"><div class="flex items-center justify-between px-gutter py-space-md"><div class="flex items-center gap-space-sm"><img alt="Zaria Atelier Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WOWYRZI25iyZyBWqYp_iD-OxEexzU0GFvTHEM4eQtTNpr_OrBSQ-_i7NjdrZQxgw0kbLAMRHzdRn3UkSynJq8gvvKUW1jHMHS2J73i_DGze2YZqz13EMEdB7ITsEleMAeDCQzkJpWbHD2-jZriW5FlU2ikJat-NNH7B7jQDUfUlaHEI6G-M7tEfnEVkpya4Jpm2uaUPobBI066lEkmBp5AXE2KTLeERnz1RwqjRgPZVxLE3A48LSBhZA"/><span class="font-headline-md text-headline-md tracking-wider">ZARIA</span></div><button aria-label="Close Menu" class="w-11 h-11 flex items-center justify-center text-on-surface" id="menu-close-btn"><span class="material-symbols-outlined text-[26px]">close</span></button></div><div class="px-gutter pt-space-xs pb-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">Curated Indian Haute Couture</span></div><div class="flex flex-col py-space-xs font-title-md text-title-md text-on-surface tracking-wider"><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors font-medium text-secondary" data-path="collection-catalog" href="#">NEW ARRIVALS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors text-secondary" data-path="collection-catalog" href="#">SALE</a><details class="group px-gutter py-space-sm"><summary class="flex items-center justify-between cursor-pointer list-none select-none"><span>ETHNIC WEAR</span><span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-open:rotate-180">expand_more</span></summary><div class="flex flex-col pl-space-md pt-space-sm pb-space-xs gap-space-sm font-body-md text-body-md text-on-surface-variant"><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Suit Sets</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Kurta Sets</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Sarees</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Lehengas</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Shawls &amp; Dupattas</a></div></details><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">BEST SELLERS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">DRESSES</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">CO-ORDS &amp; JUMPSUITS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">TOPS &amp; SHIRTS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">UNDER ₹1499</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors tracking-widest font-medium" data-path="collection-catalog" href="#">LUXE ATELIER</a></div><div class="mt-auto px-gutter pt-space-lg flex flex-col gap-space-sm"><a class="flex items-center gap-space-sm font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant" data-path="boutique-profile" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span><span>Client Sanctuary / Profile</span></a><p class="font-label-sm text-label-sm text-outline tracking-wider pt-space-xs">Crafted Handlooms • Made in India</p></div></div></div></aside><div class="fixed inset-0 z-50 bg-surface/95 backdrop-blur-2xl transition-opacity duration-200 opacity-0 pointer-events-none flex flex-col" id="search-modal"><div class="pt-safe px-gutter pb-space-md flex items-center justify-between gap-space-sm"><div class="flex-1 flex items-center gap-space-sm bg-surface-container-low px-space-md py- space-sm rounded-lg"><span class="material-symbols-outlined text-outline">search</span><input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search handloom sarees, anarkalis, chanderi silk..." type="text"/></div><button aria-label="Close Search" class="w-11 h-11 flex items-center justify-center text-on-surface" id="search-close-btn"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="px-gutter py-space-md overflow-y-auto"><p class="font-label-sm text-label-sm tracking-widest uppercase text-on-surface-variant mb-space-sm">Trending Searches</p><div class="flex flex-wrap gap-space-xs mb-space-lg"><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Banarasi Silk</span><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Chanderi Suits</span><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Ivory Anarkali</span><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Handwoven Shawls</span></div></div></div><aside class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none" id="cart-drawer"><div class="fixed inset-y-0 right-0 w-full max-w-sm bg-surface-container-lowest flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out shadow-2xl" id="cart-panel"><div class="flex flex-col h-full pt-safe pb-safe"><div class="flex items-center justify-between px-gutter py-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-wide">Your Bag</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">(2 items)</span></div><button aria-label="Close Bag" class="w-11 h-11 flex items-center justify-center text-on-surface" id="cart-close-btn"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="flex-1 overflow-y-auto px-gutter py-space-xs flex flex-col gap-space-md"><div class="flex gap-space-md py-space-sm"><div class="w-20 h-28 bg-surface-container-low flex-shrink-0 relative"><div class="w-full h-full flex items-center justify-center text-outline text-xs uppercase tracking-widest">Artisan Silk</div></div><div class="flex-1 flex flex-col justify-between"><div class="flex justify-between items-start"><div><h4 class="font-headline-md text-[16px] text-on-surface leading-tight">Noor Chanderi Kurta</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Ivory / Size M</p></div><button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button></div><div class="flex justify-between items-center"><span class="font-price-md text-price-md text-on-surface">₹4,890</span><span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1</span></div></div></div><div class="flex gap-space-md py-space-sm"><div class="w-20 h-28 bg-surface-container-low flex-shrink-0 relative"><div class="w-full h-full flex items-center justify-center text-outline text-xs uppercase tracking-widest">Zari Weave</div></div><div class="flex-1 flex flex-col justify-between"><div class="flex justify-between items-start"><div><h4 class="font-headline-md text-[16px] text-on-surface leading-tight">Gulmarg Pashmina Stole</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Almond Gold / Free Size</p></div><button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button></div><div class="flex justify-between items-center"><span class="font-price-md text-price-md text-on-surface">₹6,200</span><span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1</span></div></div></div></div><div class="p-gutter bg-surface-container-low flex flex-col gap-space-sm"><div class="flex justify-between font-label-lg text-label-lg tracking-wider uppercase text-on-surface-variant"><span>Subtotal</span><span class="font-price-lg text-price-lg text-on-surface font-semibold">₹11,090</span></div><p class="font-label-sm text-label-sm text-outline">Taxes and luxury gift packaging calculated at checkout.</p><a class="w-full h-12 bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg uppercase tracking-widest hover:bg-surface-variant hover:text-primary transition-colors" data-path="checkout-experience" href="#">Proceed to Checkout</a></div></div></div></aside><script>(function(){const toggleModal=(elemId,panelId,isOpen)=>{const el=document.getElementById(elemId);const panel=panelId?document.getElementById(panelId):null;if(!el)return;if(isOpen){el.classList.remove('opacity-0','pointer-events-none');el.classList.add('opacity-100');if(panel){panel.classList.remove('-translate-x-full','translate-x-full');}}else{el.classList.remove('opacity-100');el.classList.add('opacity-0','pointer-events-none');if(panel){if(elemId==='nav-drawer')panel.classList.add('-translate-x-full');if(elemId==='cart-drawer')panel.classList.add('translate-x-full');}}};document.getElementById('menu-open-btn')?.addEventListener('click',()=>toggleModal('nav-drawer','drawer-panel',true));document.getElementById('menu-close-btn')?.addEventListener('click',()=>toggleModal('nav-drawer','drawer-panel',false));document.getElementById('nav-drawer')?.addEventListener('click',(e)=>{if(e.target.id==='nav-drawer')toggleModal('nav-drawer','drawer-panel',false);});document.getElementById('cart-open-btn')?.addEventListener('click',()=>toggleModal('cart-drawer','cart-panel',true));document.getElementById('cart-close-btn')?.addEventListener('click',()=>toggleModal('cart-drawer','cart-panel',false));document.getElementById('cart-drawer')?.addEventListener('click',(e)=>{if(e.target.id==='cart-drawer')toggleModal('cart-drawer','cart-panel',false);});document.getElementById('search-open-btn')?.addEventListener('click',()=>toggleModal('search-modal',null,true));document.getElementById('search-close-btn')?.addEventListener('click',()=>toggleModal('search-modal',null,false));})();</script></body></html>

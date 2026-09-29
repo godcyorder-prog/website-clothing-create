@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#b62419", "inverse-surface": "#2f312f", "error-container": "#ffdad6", "surface-container-highest": "#e3e2df", "background": "#faf9f6", "surface-container-lowest": "#ffffff", "primary": "#000000", "on-tertiary-fixed-variant": "#244f31", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#c4c7c7", "primary-container": "#1c1b1b", "on-primary": "#ffffff", "on-secondary-container": "#5c0000", "on-background": "#1a1c1a", "surface": "#faf9f6", "tertiary-container": "#00210c", "primary-fixed": "#e5e2e1", "surface-container-low": "#f4f3f0", "inverse-on-surface": "#f2f1ee", "inverse-primary": "#c8c6c5", "secondary-fixed-dim": "#ffb4a8", "tertiary-fixed-dim": "#a2d2aa", "on-tertiary-fixed": "#00210c", "on-surface-variant": "#444748", "on-secondary-fixed": "#410000", "surface-container": "#efeeeb", "on-error": "#ffffff", "on-primary-fixed": "#1c1b1b", "on-error-container": "#93000a", "on-primary-container": "#858383", "on-surface": "#1a1c1a", "primary-fixed-dim": "#c8c6c5", "surface-dim": "#dbdad7", "on-secondary-fixed-variant": "#930303", "surface-container-high": "#e9e8e5", "outline": "#747878", "surface-tint": "#5f5e5e", "on-primary-fixed-variant": "#474746", "surface-variant": "#e3e2df", "secondary-fixed": "#ffdad5", "on-tertiary-container": "#618e6a", "secondary-container": "#fd5845", "surface-bright": "#faf9f6", "tertiary": "#000000", "tertiary-fixed": "#bdeec5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1.5rem", "space-xl": "4rem", "space-2xl": "6rem", "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "2rem", "gutter-desktop": "2.5rem", "margin-tablet": "2.5rem", "space-md": "1rem", "margin-desktop": "5rem", "space-xs": "0.25rem" }, fontFamily: { "price-md": ["Inter"], "headline-md": ["Playfair Display"], "price-lg": ["Inter"], "headline-lg": ["Playfair Display"], "display-xl-mobile": ["Playfair Display"], "label-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["Inter"], "display-xl": ["Playfair Display"], "title-md": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "price-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "price-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "300" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "300" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.18em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf9f6;color:#1a1c1a;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl"><div class="bg-primary text-on-primary py-1 px-4 text-center"><p class="font-label-sm text-label-sm tracking-widest uppercase">FREE SHIPPING ON ORDERS ABOVE ₹1999</p></div><div class="h-20 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" id="menu-open-btn"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="Zaria Atelier Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WOWYRZI25iyZyBWqYp_iD-OxEexzU0GFvTHEM4eQtTNpr_OrBSQ-_i7NjdrZQxgw0kbLAMRHzdRn3UkSynJq8gvvKUW1jHMHS2J73i_DGze2YZqz13EMEdB7ITsEleMAeDCQzkJpWbHD2-jZriW5FlU2ikJat-NNH7B7jQDUfUlaHEI6G-M7tEfnEVkpya4Jpm2uaUPobBI066lEkmBp5AXE2KTLeERnz1RwqjRgPZVxLE3A48LSBhZA"/><span class="font-headline-md text-headline-md tracking-widest uppercase ml-1 hidden sm:inline-block">ZARIA</span></div><div class="flex items-center"><span class="font-label-lg text-label-lg tracking-wider text-on-surface-variant uppercase hidden md:inline-block mr-space-md">Boutique Profile</span><button aria-label="Search Products" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" id="search-open-btn"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="Wishlist" class="w-11 h-11 relative flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></a><button aria-label="Shopping Cart with 2 items" class="h-11 px-space-xs flex items-center gap-1.5 text-on-surface hover:text-on-surface-variant transition-colors" id="cart-open-btn"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="font-label-sm text-label-sm font-medium tracking-normal">(2)</span></button><div class="ml-1 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK_TgvI0Oq57M8f12qN3i-2X8rfVP5JR5Lj5TZ5grEZFCTr3F5MydTYsinoWMmZsQP4xVkqMPv3cUS2lPWij0qLBATAdefbhpvJMOr70It0mMT-YutJtw_tf5f_Wo5YwyL0TPBAlv2TmR9iBkB9AC0ype4Pa4-7Bn5YxJN1MxbTbdr86o9XCuxXYpcTn3cO68I1sKNEobzxPQccpNm4qhR1kudk8zebKvvVkavXBKA2GmR9BXhJ4A"/></div></div></div></header><main class="flex flex-col relative w-full pt-20 bg-surface min-h-screen pb-20"><div class="flex flex-col w-full">
+<!-- Editorial Warm Header Banner -->
+<div class="relative w-full bg-surface-container-low px-margin py-space-lg overflow-hidden">
+<div class="flex flex-col gap-space-xs relative z-10 max-w-md mx-auto">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Sanctuary of Craft</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight font-normal">The Atelier Circle</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+        Welcome to the Zaria Circle. Enjoy early access to limited artisanal drops, private weaver showcases, and bespoke personalized drape consultations.
+      </p>
+</div>
+<!-- Ambient subtle motif accent -->
+<div class="absolute -right-8 -bottom-10 opacity-15 pointer-events-none text-on-surface">
+<svg fill="none" height="180" stroke="currentColor" stroke-width="0.75" viewbox="0 0 100 100" width="180">
+<circle cx="50" cy="50" r="46"></circle>
+<circle cx="50" cy="50" r="34"></circle>
+<path d="M50 4 L50 96 M4 50 L96 50 M17.5 17.5 L82.5 82.5 M17.5 82.5 L82.5 17.5"></path>
+</svg>
+</div>
+</div>
+<!-- Main Container -->
+<div class="px-margin py-space-md flex flex-col gap-space-lg max-w-md mx-auto w-full">
+<!-- Tab Toggle -->
+<div class="w-full bg-surface-container rounded-none p-1 flex">
+<button class="flex-1 py-2.5 text-center font-label-lg text-label-lg uppercase tracking-widest transition-all bg-primary text-on-primary" id="tab-login">
+        Sign In
+      </button>
+<button class="flex-1 py-2.5 text-center font-label-lg text-label-lg uppercase tracking-widest transition-all text-on-surface-variant hover:text-on-surface" id="tab-register">
+        Create Account
+      </button>
+</div>
+<!-- Auth Card Panel -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Login Form View -->
+<form class="flex flex-col gap-space-md" id="form-login" onsubmit="event.preventDefault();">
+<!-- Identifier Input (Email / Phone) -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" for="user-identifier">
+            Email or 10-Digit Mobile Number
+          </label>
+<div class="relative flex items-center bg-surface-container-low px-3 py-2.5 focus-within:bg-surface-container">
+<span class="material-symbols-outlined text-[20px] text-outline mr-2 select-none">badge</span>
+<input autocomplete="username" class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="user-identifier" inputmode="email" placeholder="e.g. ananya@atelier.com or 9876543210" required="" type="text"/>
+</div>
+</div>
+<!-- Password Input with Toggle -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" for="user-password">
+              Password
+            </label>
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:underline" id="forgot-password-btn" type="button">
+              Forgot?
+            </button>
+</div>
+<div class="relative flex items-center bg-surface-container-low px-3 py-2.5 focus-within:bg-surface-container">
+<span class="material-symbols-outlined text-[20px] text-outline mr-2 select-none">lock</span>
+<input autocomplete="current-password" class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="user-password" placeholder="Enter your confidential passphrase" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="text-outline hover:text-on-surface transition-colors p-1 flex items-center justify-center" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me Checkbox -->
+<div class="flex items-center justify-between py-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<div class="relative flex items-center">
+<input checked="" class="peer sr-only" id="remember-me" type="checkbox"/>
+<div class="w-4 h-4 bg-surface-container-highest peer-checked:bg-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-primary hidden peer-checked:block">check</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Keep me signed in on this device</span>
+</label>
+</div>
+<!-- Primary Sign In Button -->
+<button class="w-full h-12 bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-surface-variant hover:text-primary transition-all active:scale-[0.99]" id="btn-submit-login" type="submit">
+<span>Sign In to Sanctuary</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Registration Form View (Hidden by default) -->
+<form class="hidden flex-col gap-space-md" id="form-register" onsubmit="event.preventDefault();">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Full Legal Name</label>
+<div class="flex items-center bg-surface-container-low px-3 py-2.5">
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="e.g. Radhika Singhania" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Mobile Contact</label>
+<div class="flex items-center bg-surface-container-low px-3 py-2.5">
+<span class="font-body-md text-body-md text-outline mr-2">+91</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="10 digit number" required="" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Email Address</label>
+<div class="flex items-center bg-surface-container-low px-3 py-2.5">
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="client@domain.com" required="" type="email"/>
+</div>
+</div>
+<button class="w-full h-12 bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-surface-variant hover:text-primary transition-all" type="submit">
+<span>Create Atelier Account</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</button>
+</form>
+<!-- Alternate Divider -->
+<div class="flex items-center gap-3 my-1">
+<div class="h-[1px] flex-1 bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">or authenticate with</span>
+<div class="h-[1px] flex-1 bg-surface-container-high"></div>
+</div>
+<!-- Quick Social / Indian E-commerce Single Click Authentication -->
+<div class="flex flex-col gap-2.5">
+<!-- OTP Button -->
+<button class="w-full h-11 bg-surface-container-low text-on-surface font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors" id="btn-otp-login" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">sms</span>
+<span>Continue with Instant OTP</span>
+</button>
+<!-- Google Authentication -->
+<button class="w-full h-11 bg-surface-container-low text-on-surface font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors" type="button">
+<svg class="w-4 h-4" viewbox="0 0 24 24">
+<path d="M21.35 11.1h-9.17v2.73h5.51c-.33 1.83-1.89 3.19-3.79 3.19-2.27 0-4.11-1.84-4.11-4.11s1.84-4.11 4.11-4.11c1.02 0 1.96.38 2.68 1.01l2.06-2.06C17.37 6.47 15.48 5.6 13.35 5.6 9.49 5.6 6.36 8.73 6.36 12.6s3.13 7 7 7c3.99 0 6.64-2.8 6.64-6.75 0-.58-.06-1.12-.17-1.75h-.48z" fill="currentColor"></path>
+</svg>
+<span>Continue with Google</span>
+</button>
+</div>
+</div>
+<!-- Member Perks Section: Rich Tactile Carousel/Grid -->
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">Member Sanctuary Perks</h2>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Active Benefits</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Perk 1: Loyalty Coins -->
+<div class="bg-surface-container-lowest p-3.5 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[22px] text-secondary">toll</span>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 uppercase tracking-wide">Pre-loaded</span>
+</div>
+<div class="mt-4">
+<div class="font-price-lg text-price-lg text-on-surface font-semibold">250 Coins</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Worth ₹250 instant discount on your inaugural order</p>
+</div>
+</div>
+<!-- Perk 2: Wishlist -->
+<div class="bg-surface-container-lowest p-3.5 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[22px] text-on-surface">favorite</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 uppercase tracking-wider">3 Saved</span>
+</div>
+<div class="mt-4">
+<div class="font-title-md text-title-md text-on-surface">Couture Vault</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Gulmarg Stole, Noor Kurta &amp; 1 other saved pieces</p>
+</div>
+</div>
+<!-- Perk 3: Order Tracking -->
+<div class="bg-surface-container-lowest p-3.5 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[22px] text-on-surface">local_shipping</span>
+<span class="material-symbols-outlined text-[18px] text-outline">north_east</span>
+</div>
+<div class="mt-4">
+<div class="font-title-md text-title-md text-on-surface">Order Logistics</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Real-time artisan dispatch and heritage packaging alerts</p>
+</div>
+</div>
+<!-- Perk 4: Sizing & Vault -->
+<div class="bg-surface-container-lowest p-3.5 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[22px] text-on-surface">straighten</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tailored</span>
+</div>
+<div class="mt-4">
+<div class="font-title-md text-title-md text-on-surface">Atelier Silhouette</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Custom blouse &amp; kurta dimensions safely recorded</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Textile Vignette Card -->
+<div class="bg-surface-container p-4 flex gap-3 items-center">
+<div class="w-14 h-16 flex-shrink-0 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up photography of delicate gold zari embroidery on unbleached natural tussar silk handloom fabric, illuminated by soft studio lighting in a luxury Indian fashion house atelier." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALuCli4p-eCFk9m7OP1iNltxcKarUhBssM8FDuTBwkK6eOFwbuUztBC5cE_t1ZGKYVoZD7T1ZaYqBjQ3eU9KILiu3M3-56MT6CBfxHQDsjIrWpkmwfz8H7qEF4AmYWEEDpbyF12St_zdj82q08X_qr1Ut2cnc3-iWYOexLzgPFYdUlTbJkNWD7J7_8SuN2sldqhVCPqdTYYoaPotXpyqektpbHfPdB-liXt8pF6UN3R4yimOb871g"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">The Zaria Promise</span>
+<h3 class="font-headline-md text-[16px] text-on-surface truncate">Artisanal Traceability</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Every woven thread links directly to master craftspersons in Varanasi &amp; Chanderi.</p>
+</div>
+</div>
+<!-- Concierge Support Card -->
+<div class="bg-surface-container-low p-space-md shadow-sm flex flex-col gap-space-sm mb-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md text-on-surface">Boutique Concierge</h4>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Personal Stylist On Call</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Need assistance with handloom fitment, trousseau appointments, or account verification? Our personal shoppers are at your disposal.
+      </p>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<!-- WhatsApp Connect -->
+<a class="h-11 bg-surface-container-lowest text-on-surface flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors font-label-lg text-label-lg uppercase tracking-wider" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-[#25D366]">chat</span>
+<span>WhatsApp</span>
+</a>
+<!-- Phone Call -->
+<a class="h-11 bg-surface-container-lowest text-on-surface flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors font-label-lg text-label-lg uppercase tracking-wider" href="tel:+919876543210">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>+91 98765 43210</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+    (function initAuthInteractions() {
+      const tabLogin = document.getElementById('tab-login');
+      const tabRegister = document.getElementById('tab-register');
+      const formLogin = document.getElementById('form-login');
+      const formRegister = document.getElementById('form-register');
+      const togglePassword = document.getElementById('toggle-password');
+      const passwordInput = document.getElementById('user-password');
+      const eyeIcon = document.getElementById('eye-icon');
+      const btnOtp = document.getElementById('btn-otp-login');
+      const identifierInput = document.getElementById('user-identifier');
+
+      // Tab switching
+      if (tabLogin && tabRegister && formLogin && formRegister) {
+        tabLogin.addEventListener('click', () => {
+          tabLogin.className = "flex-1 py-2.5 text-center font-label-lg text-label-lg uppercase tracking-widest transition-all bg-primary text-on-primary";
+          tabRegister.className = "flex-1 py-2.5 text-center font-label-lg text-label-lg uppercase tracking-widest transition-all text-on-surface-variant hover:text-on-surface";
+          formLogin.classList.remove('hidden');
+          formLogin.classList.add('flex');
+          formRegister.classList.add('hidden');
+          formRegister.classList.remove('flex');
+        });
+
+        tabRegister.addEventListener('click', () => {
+          tabRegister.className = "flex-1 py-2.5 text-center font-label-lg text-label-lg uppercase tracking-widest transition-all bg-primary text-on-primary";
+          tabLogin.className = "flex-1 py-2.5 text-center font-label-lg text-label-lg uppercase tracking-widest transition-all text-on-surface-variant hover:text-on-surface";
+          formRegister.classList.remove('hidden');
+          formRegister.classList.add('flex');
+          formLogin.classList.add('hidden');
+          formLogin.classList.remove('flex');
+        });
+      }
+
+      // Password visibility toggle
+      if (togglePassword && passwordInput && eyeIcon) {
+        togglePassword.addEventListener('click', () => {
+          const isPassword = passwordInput.getAttribute('type') === 'password';
+          passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+          eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+
+      // Quick Indian OTP flow helper prompt
+      if (btnOtp && identifierInput) {
+        btnOtp.addEventListener('click', () => {
+          const val = identifierInput.value.trim();
+          if (!val) {
+            identifierInput.focus();
+            identifierInput.placeholder = "Please enter mobile number for OTP";
+            identifierInput.parentElement.classList.add('bg-error-container/40');
+            setTimeout(() => {
+              identifierInput.parentElement.classList.remove('bg-error-container/40');
+            }, 1200);
+          } else {
+            btnOtp.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Sending OTP...</span>';
+            setTimeout(() => {
+              btnOtp.innerHTML = '<span class="material-symbols-outlined text-[18px] text-[#244f31]">check_circle</span><span>6-Digit OTP Dispatched</span>';
+            }, 900);
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl" data-active-classes="text-primary font-medium"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="home-feed" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Atelier</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="collection-catalog" href="#"><span class="material-symbols-outlined text-[22px]">styler</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Couture</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="editorial-stories" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Stories</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite_border</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Saved</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 transition-all gap-0.5 text-primary font-medium" data-path="boutique-profile" href="#"><span class="material-symbols-outlined text-[22px]">person_outline</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Account</span></a></div></nav><aside class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none" id="nav-drawer"><div class="fixed inset-y-0 left-0 w-full max-w-sm bg-surface-container-lowest flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-out shadow-2xl" id="drawer-panel"><div class="flex flex-col h-full overflow-y-auto pt-safe pb-space-lg"><div class="flex items-center justify-between px-gutter py-space-md"><div class="flex items-center gap-space-sm"><img alt="Zaria Atelier Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WOWYRZI25iyZyBWqYp_iD-OxEexzU0GFvTHEM4eQtTNpr_OrBSQ-_i7NjdrZQxgw0kbLAMRHzdRn3UkSynJq8gvvKUW1jHMHS2J73i_DGze2YZqz13EMEdB7ITsEleMAeDCQzkJpWbHD2-jZriW5FlU2ikJat-NNH7B7jQDUfUlaHEI6G-M7tEfnEVkpya4Jpm2uaUPobBI066lEkmBp5AXE2KTLeERnz1RwqjRgPZVxLE3A48LSBhZA"/><span class="font-headline-md text-headline-md tracking-wider">ZARIA</span></div><button aria-label="Close Menu" class="w-11 h-11 flex items-center justify-center text-on-surface" id="menu-close-btn"><span class="material-symbols-outlined text-[26px]">close</span></button></div><div class="px-gutter pt-space-xs pb-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">Curated Indian Haute Couture</span></div><div class="flex flex-col py-space-xs font-title-md text-title-md text-on-surface tracking-wider"><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors font-medium text-secondary" data-path="collection-catalog" href="#">NEW ARRIVALS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors text-secondary" data-path="collection-catalog" href="#">SALE</a><details class="group px-gutter py-space-sm"><summary class="flex items-center justify-between cursor-pointer list-none select-none"><span>ETHNIC WEAR</span><span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-open:rotate-180">expand_more</span></summary><div class="flex flex-col pl-space-md pt-space-sm pb-space-xs gap-space-sm font-body-md text-body-md text-on-surface-variant"><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Suit Sets</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Kurta Sets</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Sarees</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Lehengas</a><a class="py-1 hover:text-on-surface transition-colors" data-path="collection-catalog" href="#">Shawls &amp; Dupattas</a></div></details><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">BEST SELLERS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">DRESSES</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">CO-ORDS &amp; JUMPSUITS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">TOPS &amp; SHIRTS</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors" data-path="collection-catalog" href="#">UNDER ₹1499</a><a class="px-gutter py-space-sm hover:bg-surface-container-low transition-colors tracking-widest font-medium" data-path="collection-catalog" href="#">LUXE ATELIER</a></div><div class="mt-auto px-gutter pt-space-lg flex flex-col gap-space-sm"><a class="flex items-center gap-space-sm font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant" data-path="boutique-profile" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span><span>Client Sanctuary / Profile</span></a><p class="font-label-sm text-label-sm text-outline tracking-wider pt-space-xs">Crafted Handlooms • Made in India</p></div></div></div></aside><div class="fixed inset-0 z-50 bg-surface/95 backdrop-blur-2xl transition-opacity duration-200 opacity-0 pointer-events-none flex flex-col" id="search-modal"><div class="pt-safe px-gutter pb-space-md flex items-center justify-between gap-space-sm"><div class="flex-1 flex items-center gap-space-sm bg-surface-container-low px-space-md py- space-sm rounded-lg"><span class="material-symbols-outlined text-outline">search</span><input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search handloom sarees, anarkalis, chanderi silk..." type="text"/></div><button aria-label="Close Search" class="w-11 h-11 flex items-center justify-center text-on-surface" id="search-close-btn"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="px-gutter py-space-md overflow-y-auto"><p class="font-label-sm text-label-sm tracking-widest uppercase text-on-surface-variant mb-space-sm">Trending Searches</p><div class="flex flex-wrap gap-space-xs mb-space-lg"><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Banarasi Silk</span><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Chanderi Suits</span><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Ivory Anarkali</span><span class="px-3 py-1.5 bg-surface-container-low font-label-sm text-label-sm tracking-wide text-on-surface cursor-pointer">Handwoven Shawls</span></div></div></div><aside class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none" id="cart-drawer"><div class="fixed inset-y-0 right-0 w-full max-w-sm bg-surface-container-lowest flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out shadow-2xl" id="cart-panel"><div class="flex flex-col h-full pt-safe pb-safe"><div class="flex items-center justify-between px-gutter py-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-wide">Your Bag</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">(2 items)</span></div><button aria-label="Close Bag" class="w-11 h-11 flex items-center justify-center text-on-surface" id="cart-close-btn"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="flex-1 overflow-y-auto px-gutter py-space-xs flex flex-col gap-space-md"><div class="flex gap-space-md py-space-sm"><div class="w-20 h-28 bg-surface-container-low flex-shrink-0 relative"><div class="w-full h-full flex items-center justify-center text-outline text-xs uppercase tracking-widest">Artisan Silk</div></div><div class="flex-1 flex flex-col justify-between"><div class="flex justify-between items-start"><div><h4 class="font-headline-md text-[16px] text-on-surface leading-tight">Noor Chanderi Kurta</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Ivory / Size M</p></div><button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button></div><div class="flex justify-between items-center"><span class="font-price-md text-price-md text-on-surface">₹4,890</span><span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1</span></div></div></div><div class="flex gap-space-md py-space-sm"><div class="w-20 h-28 bg-surface-container-low flex-shrink-0 relative"><div class="w-full h-full flex items-center justify-center text-outline text-xs uppercase tracking-widest">Zari Weave</div></div><div class="flex-1 flex flex-col justify-between"><div class="flex justify-between items-start"><div><h4 class="font-headline-md text-[16px] text-on-surface leading-tight">Gulmarg Pashmina Stole</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Almond Gold / Free Size</p></div><button class="text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button></div><div class="flex justify-between items-center"><span class="font-price-md text-price-md text-on-surface">₹6,200</span><span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1</span></div></div></div></div><div class="p-gutter bg-surface-container-low flex flex-col gap-space-sm"><div class="flex justify-between font-label-lg text-label-lg tracking-wider uppercase text-on-surface-variant"><span>Subtotal</span><span class="font-price-lg text-price-lg text-on-surface font-semibold">₹11,090</span></div><p class="font-label-sm text-label-sm text-outline">Taxes and luxury gift packaging calculated at checkout.</p><a class="w-full h-12 bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg uppercase tracking-widest hover:bg-surface-variant hover:text-primary transition-colors" data-path="checkout-experience" href="#">Proceed to Checkout</a></div></div></div></aside><script>(function(){const toggleModal=(elemId,panelId,isOpen)=>{const el=document.getElementById(elemId);const panel=panelId?document.getElementById(panelId):null;if(!el)return;if(isOpen){el.classList.remove('opacity-0','pointer-events-none');el.classList.add('opacity-100');if(panel){panel.classList.remove('-translate-x-full','translate-x-full');}}else{el.classList.remove('opacity-100');el.classList.add('opacity-0','pointer-events-none');if(panel){if(elemId==='nav-drawer')panel.classList.add('-translate-x-full');if(elemId==='cart-drawer')panel.classList.add('translate-x-full');}}};document.getElementById('menu-open-btn')?.addEventListener('click',()=>toggleModal('nav-drawer','drawer-panel',true));document.getElementById('menu-close-btn')?.addEventListener('click',()=>toggleModal('nav-drawer','drawer-panel',false));document.getElementById('nav-drawer')?.addEventListener('click',(e)=>{if(e.target.id==='nav-drawer')toggleModal('nav-drawer','drawer-panel',false);});document.getElementById('cart-open-btn')?.addEventListener('click',()=>toggleModal('cart-drawer','cart-panel',true));document.getElementById('cart-close-btn')?.addEventListener('click',()=>toggleModal('cart-drawer','cart-panel',false));document.getElementById('cart-drawer')?.addEventListener('click',(e)=>{if(e.target.id==='cart-drawer')toggleModal('cart-drawer','cart-panel',false);});document.getElementById('search-open-btn')?.addEventListener('click',()=>toggleModal('search-modal',null,true));document.getElementById('search-close-btn')?.addEventListener('click',()=>toggleModal('search-modal',null,false));})();</script></body></html>

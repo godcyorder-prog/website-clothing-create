@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#b62419", "inverse-surface": "#2f312f", "error-container": "#ffdad6", "surface-container-highest": "#e3e2df", "background": "#faf9f6", "surface-container-lowest": "#ffffff", "primary": "#000000", "on-tertiary-fixed-variant": "#244f31", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#c4c7c7", "primary-container": "#1c1b1b", "on-primary": "#ffffff", "on-secondary-container": "#5c0000", "on-background": "#1a1c1a", "surface": "#faf9f6", "tertiary-container": "#00210c", "primary-fixed": "#e5e2e1", "surface-container-low": "#f4f3f0", "inverse-on-surface": "#f2f1ee", "inverse-primary": "#c8c6c5", "secondary-fixed-dim": "#ffb4a8", "tertiary-fixed-dim": "#a2d2aa", "on-tertiary-fixed": "#00210c", "on-surface-variant": "#444748", "on-secondary-fixed": "#410000", "surface-container": "#efeeeb", "on-error": "#ffffff", "on-primary-fixed": "#1c1b1b", "on-error-container": "#93000a", "on-primary-container": "#858383", "on-surface": "#1a1c1a", "primary-fixed-dim": "#c8c6c5", "surface-dim": "#dbdad7", "on-secondary-fixed-variant": "#930303", "surface-container-high": "#e9e8e5", "outline": "#747878", "surface-tint": "#5f5e5e", "on-primary-fixed-variant": "#474746", "surface-variant": "#e3e2df", "secondary-fixed": "#ffdad5", "on-tertiary-container": "#618e6a", "secondary-container": "#fd5845", "surface-bright": "#faf9f6", "tertiary": "#000000", "tertiary-fixed": "#bdeec5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1.5rem", "space-xl": "4rem", "space-2xl": "6rem", "space-sm": "0.5rem", "margin": "1.25rem", "space-lg": "2rem", "gutter-desktop": "2.5rem", "margin-tablet": "2.5rem", "space-md": "1rem", "margin-desktop": "5rem", "space-xs": "0.25rem" }, fontFamily: { "price-md": ["Inter"], "headline-md": ["Playfair Display"], "price-lg": ["Inter"], "headline-lg": ["Playfair Display"], "display-xl-mobile": ["Playfair Display"], "label-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-lg": ["Inter"], "display-xl": ["Playfair Display"], "title-md": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "price-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "price-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "300" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "300" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.18em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf9f6;color:#1a1c1a;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="Zaria Atelier Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WOWYRZI25iyZyBWqYp_iD-OxEexzU0GFvTHEM4eQtTNpr_OrBSQ-_i7NjdrZQxgw0kbLAMRHzdRn3UkSynJq8gvvKUW1jHMHS2J73i_DGze2YZqz13EMEdB7ITsEleMAeDCQzkJpWbHD2-jZriW5FlU2ikJat-NNH7B7jQDUfUlaHEI6G-M7tEfnEVkpya4Jpm2uaUPobBI066lEkmBp5AXE2KTLeERnz1RwqjRgPZVxLE3A48LSBhZA"/><h1 class="font-headline-md text-headline-md tracking-wide text-on-surface ml-1">Product Detail</h1></div><div class="flex items-center gap-space-xs"><a aria-label="Wishlist" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite_border</span></a><div class="ml-1 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK_TgvI0Oq57M8f12qN3i-2X8rfVP5JR5Lj5TZ5grEZFCTr3F5MydTYsinoWMmZsQP4xVkqMPv3cUS2lPWij0qLBATAdefbhpvJMOr70It0mMT-YutJtw_tf5f_Wo5YwyL0TPBAlv2TmR9iBkB9AC0ype4Pa4-7Bn5YxJN1MxbTbdr86o9XCuxXYpcTn3cO68I1sKNEobzxPQccpNm4qhR1kudk8zebKvvVkavXBKA2GmR9BXhJ4A"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-12">
+<!-- Editorial Gallery Section -->
+<section class="relative w-full overflow-hidden bg-surface-container-low">
+<div class="relative w-full aspect-[3/4] overflow-hidden" id="gallery-container">
+<!-- Slides -->
+<div class="flex w-full h-full transition-transform duration-500 ease-out" id="gallery-track">
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="High-fashion editorial full body portrait of an Indian woman wearing the Aubree Maxi Dress in lightweight natural mulmul cotton with subtle artisanal hand-block botanical motifs, flowing hemline, warm soft studio natural daylight, minimalist luxury atelier ambiance, rich textile textures, muted ivory and terracotta tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC2_rKQIMVVwE50AT9m--YKzYxv9bTCsKQfwzcEfJkFLEc-_9n807F0Vkbk2HaJkqOZlIEqoH_s_4Q1DrdWYTTztpTh-dqqTD0bkvVMhWf4IN0Q9q4AQdibLE7qNLoWUmxN3pWnKXl2ywvQ9upE6ND7hsDWs-6riCujfWlATglnWw7XsANSah0ESNoZJ9KXNyb9P0W98eW1gUamkQGKROPoY91IvvNmZ3OR_2xJXqAeRDU33UnxQw"/>
+</div>
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Close up macro textile shot of artisan hand-block floral motifs on breathable woven ivory mulmul fabric, exquisite golden zari thread piping along mandarin collar, delicate artisanal texture, refined Indian high fashion craftsmanship, soft gentle shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM5Gmo6Zh-uMgSB_38G_jyl0YoHxReF3ATWFX0WZsj9zLa2EnygtPhVFQBOf2ASwdEVbYxpAtOGJILsieNGgkAXGAx02lRdcqw_1Rwwgq2nIXqHORxu10Ct9VO_Ijk-Y7l1KefoVyrrmMXUdVnCsOBfik4HbSrFZkiZJkHvxpn0XdKCOHFAfmSOvvTsuajxxl4ZoSpRhamoe4SuEUzBAId5N7LTzd4aNzVU-rliYrhAKEU0tIBwfE"/>
+</div>
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Editorial rear and side view of Aubree Maxi Dress showing dynamic garment drape and movement, tiered breezy silhouette flowing gracefully in motion, warm architectural arch backdrop in soft warm beige plaster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBndMVEbY6I2Toy84kiwYPD4-kTTwzlrVwOS7PdL-gHzXsybbt8Gv7IRpX5AUltYRzmgeVR4Dvk0wiSow6IUkOiFBeTa599Mxu6eWMJH-xGjx8efUtPJaflawrx4zFy8zPaQ0yS1ID2ua670euyKZiqdjZmAK_PZwwFKL3jlTxc0IbqxyUq2hCzCuHt1gEHr1fZAtOBp16fzLIWTNtZXslrt8FPwHgHPWLStKpWdCA4oXDqASlzk0M"/>
+</div>
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Stylized portrait of model seated gracefully on a minimal sculpted linen bench, styled with handcrafted filigree gold jewelry, relaxed sophisticated luxury editorial framing, soft ambient studio glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6BGEsjWYsqthXJbXUR5tJoMTai1-S5phGN-5PiQ1fQocDu2Mnn0Uo6hdhjkvC7AnYjBKAJlVvGJKXe7YSPrc4_MOdrYn5E5Xkwf4Y5vkZEQUiGnYCrsAd6Hlrabrdygs-ZRVMdTXkfQ_-mW0K6pKvU_pP_TChrk2PR39zwopPOy--H575Kf-ebIsHh4FG1LrL1e4pV4ABKwczpIXyrPBui9gdHfSgbtpdxIvC_ig-0cqBpa___jc"/>
+</div>
+</div>
+<!-- Floating Index Counter Badge -->
+<div class="absolute bottom-4 right-4 bg-primary/75 text-on-primary backdrop-blur-md px-3 py-1 font-label-sm text-label-sm tracking-widest uppercase">
+<span id="current-slide">1</span> / 4
+      </div>
+<!-- Floating Artisan Handloom Seal -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-on-surface">eco</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface">Pure Handloom Cotton</span>
+</div>
+</div>
+<!-- Thumbnails & Interactive Dots -->
+<div class="px-margin py-3 flex items-center justify-between bg-surface">
+<!-- Dots -->
+<div class="flex items-center gap-1.5" id="dots-wrap">
+<button aria-label="Slide 1" class="w-6 h-1 bg-primary transition-all duration-300 dot-indicator" onclick="setSlide(0)"></button>
+<button aria-label="Slide 2" class="w-2 h-1 bg-surface-container-highest transition-all duration-300 dot-indicator" onclick="setSlide(1)"></button>
+<button aria-label="Slide 3" class="w-2 h-1 bg-surface-container-highest transition-all duration-300 dot-indicator" onclick="setSlide(2)"></button>
+<button aria-label="Slide 4" class="w-2 h-1 bg-surface-container-highest transition-all duration-300 dot-indicator" onclick="setSlide(3)"></button>
+</div>
+<!-- Quick Thumbnail Row -->
+<div class="flex items-center gap-2">
+<button class="w-9 h-11 overflow-hidden transition-opacity opacity-100 thumb-btn" data-thumb="0" onclick="setSlide(0)">
+<img class="w-full h-full object-cover" data-alt="Aubree Maxi Dress front look miniature thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIp5QLQob1jfCqmQ-8twimqHYWUnBvBKSi4dniPFqZfUf1ZS-Xwp0H462EJbfUtsMtJT0aRu9ddI8If49yRF4Gr_4aTlhEn9BhuxFaKcDRhTzqBju6XoagL4wSMGoOLqyOTiCtNYSCMaDuDvZgXLtIB-5T7jP-MQE_34RopJXa9Xo_v6VZh0ezRZiB7ZDs_ZHje98k8DQBACPwQec7Kl2OKgpgSVd-YxtJ1ojp5_ADopu5SQLp6N8"/>
+</button>
+<button class="w-9 h-11 overflow-hidden transition-opacity opacity-50 thumb-btn" data-thumb="1" onclick="setSlide(1)">
+<img class="w-full h-full object-cover" data-alt="Aubree Maxi Dress collar fabric detail miniature thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgwlrrvAE-JuXA_Pu2UYUxADlDcxW9NIjbENAyqLVg97Ows4DflM84FQpPbuwaauqxuMhG4_HjSb6NpoMs169pzCAsg4gKM0fP3E127W8lmKBN6mcjEy0xaZQl6ru_25X4k558PD86bFFm0fWacfKBl3Es1VxrVGQVkHRwhkm4YeusgSQpJYMatEwFe4SMG8etQpPYJvaQFHisl3yRA5OEiUhxixGt5EaXeR6FsXdDA2yzznajLZk"/>
+</button>
+<button class="w-9 h-11 overflow-hidden transition-opacity opacity-50 thumb-btn" data-thumb="2" onclick="setSlide(2)">
+<img class="w-full h-full object-cover" data-alt="Aubree Maxi Dress silhouette motion miniature thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOwE6rWbsEK98C0MFDs1aeLgMzcATI04E8DUp0SLcN58qfiQi7Th7jusqAATDRDq0bwdY8aQ1XshDf0tWKnjm7OPJzqQn7SPGmyxhiW9HFhNJZ6yCSCAdiCePBry60goL4hjZ64VnzIplF-GK1s5dfdfqc8b-1JcM__9y-fU34cKB-eFjbEwFcbhglmcu2gGnx9DpXQ4IagJlykvZDRD6Codmdr_HO4Q-VrxywXjE1UQBvaLh55e8"/>
+</button>
+<button class="w-9 h-11 overflow-hidden transition-opacity opacity-50 thumb-btn" data-thumb="3" onclick="setSlide(3)">
+<img class="w-full h-full object-cover" data-alt="Aubree Maxi Dress seated profile miniature thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmLkCSct4iuyuUlCQkff84IxMOMu7x0I1IK230XZB-oWMrDW4Y8s0GvCSaPCyHd_i0opvG5uKyM8HYNBPZdXx56uIY_Mzeuh2QL_836D0ldRnsTsPZS53PxwpL8K9zCOCYP3f3Wz8RsXHF5vru2kLWQuyUZdjQU2whTn_sJPx_gbRc1dbNPJ6At4UYwfyyO_VNx-2apLz7EG0fQA69XTMH5doe5zP__FFcJzueYTy94CzPDJ7krzk"/>
+</button>
+</div>
+</div>
+</section>
+<!-- Product Details Header -->
+<section class="px-margin pt-6 flex flex-col gap-4">
+<!-- Breadcrumb & Provenance -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase">
+<span>Atelier Edition</span>
+<span>•</span>
+<span>Spring Equinox '25</span>
+</div>
+<!-- Title & Wishlist Trigger -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Aubree Maxi Dress</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ivory Botanica Hand-block Weave</span>
+</div>
+<button aria-label="Save to Wishlist" class="w-10 h-10 flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors" id="wishlist-btn" onclick="toggleWishlist()">
+<span class="material-symbols-outlined text-[20px] text-on-surface" id="wishlist-icon">favorite_border</span>
+</button>
+</div>
+<!-- Rating & Social Proof -->
+<div class="flex items-center gap-2">
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-price-md text-price-md text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(48 artisan reviews)</span>
+</div>
+<!-- Price Block -->
+<div class="bg-surface-container-low p-4 flex flex-col gap-2">
+<div class="flex items-baseline gap-3">
+<span class="font-price-lg text-price-lg text-on-surface text-[24px] leading-tight font-medium">₹699</span>
+<span class="font-price-md text-price-md text-on-surface-variant line-through">₹2,699</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 uppercase tracking-wider font-semibold">
+          74% OFF
+        </span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">local_shipping</span>
+<p class="font-body-sm text-body-sm">Inclusive of all taxes. Free shipping on orders above ₹1999</p>
+</div>
+</div>
+</section>
+<!-- Size Selection -->
+<section class="px-margin pt-6 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-label-lg text-label-lg tracking-widest uppercase text-on-surface">Select Size</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="selected-size-label">(S Selected)</span>
+</div>
+<button class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface underline underline-offset-4 flex items-center gap-1" onclick="toggleSizeGuide()">
+<span class="material-symbols-outlined text-[14px]">straighten</span>
+        Size Guide (In &amp; CM)
+      </button>
+</div>
+<!-- Size Pills Grid -->
+<div class="grid grid-cols-6 gap-2">
+<button class="size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" onclick="selectSize('XS', this)">
+        XS
+      </button>
+<button class="size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-primary text-on-primary" onclick="selectSize('S', this)">
+        S
+      </button>
+<button class="size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" onclick="selectSize('M', this)">
+        M
+      </button>
+<button class="size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" onclick="selectSize('L', this)">
+        L
+      </button>
+<button class="size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" onclick="selectSize('XL', this)">
+        XL
+      </button>
+<button class="size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" onclick="selectSize('XXL', this)">
+        XXL
+      </button>
+</div>
+<!-- Size Helper Notice -->
+<div class="flex items-center gap-2 bg-surface-container-lowest p-3 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">True to fit. Model wears Size S (Bust: 34", Height: 5'8")</span>
+</div>
+</section>
+<!-- Quantity Selector and Action Buttons -->
+<section class="px-margin pt-6 flex flex-col gap-4">
+<!-- Quantity Counter Bar -->
+<div class="flex items-center justify-between bg-surface-container-low px-4 py-2">
+<span class="font-label-lg text-label-lg tracking-widest uppercase text-on-surface">Quantity</span>
+<div class="flex items-center gap-3">
+<button aria-label="Decrease quantity" class="w-8 h-8 flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors" onclick="adjustQty(-1)">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-price-md text-price-md w-6 text-center text-on-surface" id="quantity-display">1</span>
+<button aria-label="Increase quantity" class="w-8 h-8 flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors" onclick="adjustQty(1)">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- Primary & Secondary CTA Block -->
+<div class="flex flex-col gap-2.5">
+<button class="w-full h-12 bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-[0.14em] flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-transform" onclick="handleAddToBag()">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Add To Bag</span>
+</button>
+<div class="grid grid-cols-5 gap-2">
+<button class="col-span-4 h-12 bg-surface-container-lowest text-on-surface font-label-lg text-label-lg uppercase tracking-[0.14em] shadow-sm flex items-center justify-center active:scale-[0.99] transition-transform" onclick="handleBuyNow()">
+          Buy Now • Express Checkout
+        </button>
+<button aria-label="Wishlist" class="col-span-1 h-12 bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" id="secondary-wish-btn" onclick="toggleWishlist()">
+<span class="material-symbols-outlined text-[20px]" id="secondary-wish-icon">favorite_border</span>
+</button>
+</div>
+</div>
+<!-- Trust Markers -->
+<div class="grid grid-cols-3 gap-2 py-2">
+<div class="flex flex-col items-center text-center p-2 bg-surface-container-lowest shadow-sm gap-1">
+<span class="material-symbols-outlined text-[20px] text-on-surface">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Certified Craft</span>
+</div>
+<div class="flex flex-col items-center text-center p-2 bg-surface-container-lowest shadow-sm gap-1">
+<span class="material-symbols-outlined text-[20px] text-on-surface">sync_alt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">7-Day Return</span>
+</div>
+<div class="flex flex-col items-center text-center p-2 bg-surface-container-lowest shadow-sm gap-1">
+<span class="material-symbols-outlined text-[20px] text-on-surface">bolt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">24h Dispatch</span>
+</div>
+</div>
+</section>
+<!-- Accordion Information Sections -->
+<section class="px-margin pt-6 flex flex-col gap-2">
+<!-- Accordion Item 1 -->
+<div class="bg-surface-container-low overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('acc-1')">
+<span class="font-label-lg text-label-lg tracking-widest uppercase text-on-surface">Description &amp; Highlights</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface transition-transform duration-300" id="acc-icon-1">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 flex flex-col gap-3 text-on-surface-variant font-body-md text-body-md" id="acc-1">
+<p>The Aubree Maxi Dress expresses effortless romanticism tailored in pure breathability. Designed with an airy relaxed tier silhouette, it cascades with poetic fluidity from sunrise gatherings to golden dusk soirées.</p>
+<ul class="flex flex-col gap-1.5 pl-4 list-disc font-body-sm text-body-sm">
+<li>Architectural mandarin split collar with mother-of-pearl buttons</li>
+<li>Hand-stamped botanical woodblock accents by master artisans in Bagru</li>
+<li>Concealed side-seam pockets for seamless modern utility</li>
+<li>Tiered ruffled hem with soft gather drape</li>
+</ul>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-surface-container-low overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('acc-2')">
+<span class="font-label-lg text-label-lg tracking-widest uppercase text-on-surface">Fabric &amp; Craft Care</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface transition-transform duration-300" id="acc-icon-2">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 flex flex-col gap-3 text-on-surface-variant font-body-md text-body-md" id="acc-2">
+<p>Crafted from 100% fine thread-count Mulmul Cotton, renowned for its gossamer lightness and featherweight touch against tropical climates.</p>
+<div class="bg-surface-container p-3 flex flex-col gap-1 text-on-surface font-body-sm text-body-sm">
+<span class="font-title-md text-title-md">Care Instructions:</span>
+<span>• First wash dry clean recommended to preserve hand-blocked dye richness</span>
+<span>• Subsequent cycles: Gentle hand wash in cold water using mild eco-detergent</span>
+<span>• Dry in shade inside out; warm iron on reverse setting</span>
+</div>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-surface-container-low overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('acc-3')">
+<span class="font-label-lg text-label-lg tracking-widest uppercase text-on-surface">Size &amp; Fit Guide</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface transition-transform duration-300" id="acc-icon-3">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 flex flex-col gap-3 text-on-surface-variant font-body-md text-body-md" id="acc-3">
+<p>Engineered with a relaxed ease silhouette allowing natural drape without clinging.</p>
+<div class="grid grid-cols-2 gap-2 font-body-sm text-body-sm">
+<div class="bg-surface p-2.5">
+<span class="text-on-surface font-medium block">Model Height:</span>
+<span>5'8" (173 cm)</span>
+</div>
+<div class="bg-surface p-2.5">
+<span class="text-on-surface font-medium block">Wearing Size:</span>
+<span>Small (S)</span>
+</div>
+<div class="bg-surface p-2.5">
+<span class="text-on-surface font-medium block">Garment Length:</span>
+<span>52 inches (132 cm)</span>
+</div>
+<div class="bg-surface p-2.5">
+<span class="text-on-surface font-medium block">Sleeve Length:</span>
+<span>Elbow flared sleeve</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="bg-surface-container-low overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('acc-4')">
+<span class="font-label-lg text-label-lg tracking-widest uppercase text-on-surface">Shipping &amp; Easy Returns</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface transition-transform duration-300" id="acc-icon-4">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 flex flex-col gap-3 text-on-surface-variant font-body-md text-body-md" id="acc-4">
+<p>Every piece is carefully steam-pressed and packaged in biodegradable bespoke parchment sleeves.</p>
+<ul class="flex flex-col gap-1.5 pl-4 list-disc font-body-sm text-body-sm">
+<li><strong>Dispatches in 24 Hours:</strong> Express courier via verified air delivery partners.</li>
+<li><strong>Hassle-Free 7-Day Exchange:</strong> Doorstep pickup arranged with instant exchange credit or full refund.</li>
+<li><strong>Zero Contact Delivery:</strong> Prepaid contactless drops available on request.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Complete The Look / Cross-sell Section -->
+<section class="px-margin pt-10 flex flex-col gap-5">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-on-surface-variant">Curated Ensemble</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Complete The Look</h3>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Cross-sell Card 1: Dupatta -->
+<div class="group flex flex-col bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="relative w-full aspect-[3/4] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sheer Ivory and Golden Sheen Organza Dupatta with hand-stitched scallop embroidery and delicate zari tassels, luxury editorial drape accessory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEdwc6texAZPnRgCA2tyrRVhnF5c6PxgO_VvoEXx3hYaErVxgHXvoE5KhBooAe4nLtltW-nWULrVex8UlR0O6gIfg0-Sxq5-L2CL-BTOHylc9DemsDgTrTM2lxcxhRwEeddOT5rrV1d0gcuqzLR0hZ8teawGkpeHKI6KuaILd7d4YYMNaeoYQ3LD_3sHW8n7vZ9CdEf_RstqLMzNIj5Yi7owu-vhoUuKD0MjhaZivOaWzDvww6Xxo"/>
+<div class="absolute top-2 left-2 bg-primary/80 text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 uppercase">
+            Pair With
+          </div>
+</div>
+<div class="p-3 flex flex-col gap-1.5">
+<h4 class="font-headline-md text-[15px] leading-tight text-on-surface line-clamp-1">Noor Organza Dupatta</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zari Scallop Borders</span>
+<div class="flex items-center justify-between mt-1 pt-1">
+<span class="font-price-md text-price-md text-on-surface">₹1,250</span>
+<button aria-label="Add Dupatta" class="w-7 h-7 flex items-center justify-center bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="quickAddLook('Noor Organza Dupatta')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cross-sell Card 2: Jhumki -->
+<div class="group flex flex-col bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="relative w-full aspect-[3/4] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal filigree silver gold-plated handcrafted Chandbali Jhumki earrings with dangling tiny freshwater pearls against raw marble background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXhAyZqfaO1gXjR7BWjdI6y47KR_8Jfeu07QzvZHvPoQUsYaT0egNenqMkxQ9jR60RWFs4VvhKVae7CUVjk5uQlAR6hCYl46h-BVt4fMpsFVEM2gtC5lycE2V0EGCxGPiT4DzJ8pBlaYM-qaRFY9d1IJ_2S4O9AaWx8gQU_RsvR922JQhtiR5fm1D1EBDcq5IZeU7OOVrLuucUsuLQojzhYLalj5VIuh1VFfM7zk04PAjmi3LG_lQ"/>
+<div class="absolute top-2 left-2 bg-primary/80 text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 uppercase">
+            Jewelry
+          </div>
+</div>
+<div class="p-3 flex flex-col gap-1.5">
+<h4 class="font-headline-md text-[15px] leading-tight text-on-surface line-clamp-1">Kundan Jhumki Drops</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Freshwater Pearl Beads</span>
+<div class="flex items-center justify-between mt-1 pt-1">
+<span class="font-price-md text-price-md text-on-surface">₹890</span>
+<button aria-label="Add Jhumkis" class="w-7 h-7 flex items-center justify-center bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="quickAddLook('Kundan Jhumki Drops')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Size Guide Modal Drawer Overlay -->
+<div class="fixed inset-0 z-50 bg-on-background/40 backdrop-blur-sm hidden flex-col justify-end transition-opacity" id="size-guide-modal">
+<div class="bg-surface w-full max-h-[751px] overflow-y-auto p-margin flex flex-col gap-4 shadow-xl">
+<div class="flex items-center justify-between pb-2">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-on-surface-variant">Precision Measurements</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Garment Size Chart</h3>
+</div>
+<button class="w-9 h-9 flex items-center justify-center bg-surface-container text-on-surface" onclick="toggleSizeGuide()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Unit Toggle -->
+<div class="flex bg-surface-container p-1 self-start gap-1">
+<button class="px-3 py-1 font-label-sm text-label-sm uppercase bg-primary text-on-primary" id="unit-in-btn" onclick="setChartUnit('in')">Inches</button>
+<button class="px-3 py-1 font-label-sm text-label-sm uppercase bg-transparent text-on-surface" id="unit-cm-btn" onclick="setChartUnit('cm')">Centimeters</button>
+</div>
+<!-- Measurements Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase">
+<tr>
+<th class="py-2.5 px-3">Size</th>
+<th class="py-2.5 px-3">Bust</th>
+<th class="py-2.5 px-3">Waist</th>
+<th class="py-2.5 px-3">Length</th>
+</tr>
+</thead>
+<tbody class="bg-surface-container-low text-on-surface" id="chart-body">
+<!-- Dynamic Unit populated by script -->
+</tbody>
+</table>
+</div>
+<div class="p-3 bg-surface-container text-on-surface-variant font-body-sm text-body-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] mt-0.5">info</span>
+<span> Aubree silhouette is crafted with 2-3 inches of relaxed breathing ease around bust and waist compared to standard body contours.</span>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider mt-2" onclick="toggleSizeGuide()">
+        Got It, Return to Bag
+      </button>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed bottom-6 left-margin right-margin bg-primary text-on-primary p-3.5 shadow-xl flex items-center justify-between gap-3 translate-y-24 transition-transform duration-300 z-50" id="toast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm tracking-wide" id="toast-message">Item added to your shopping bag</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase underline cursor-pointer" onclick="hideToast()">Dismiss</span>
+</div>
+</div>
+<script>
+  // Slide Carousel State
+  let currentSlideIndex = 0;
+  const totalSlides = 4;
+  const track = document.getElementById('gallery-track');
+  const indexBadge = document.getElementById('current-slide');
+  const dots = document.querySelectorAll('.dot-indicator');
+  const thumbs = document.querySelectorAll('.thumb-btn');
+
+  function setSlide(index) {
+    currentSlideIndex = index;
+    if (track) {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+    if (indexBadge) {
+      indexBadge.innerText = (index + 1).toString();
+    }
+    // Update dots
+    dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.className = "w-6 h-1 bg-primary transition-all duration-300 dot-indicator";
+      } else {
+        dot.className = "w-2 h-1 bg-surface-container-highest transition-all duration-300 dot-indicator";
+      }
+    });
+    // Update thumbnails
+    thumbs.forEach((thumb, i) => {
+      if (i === index) {
+        thumb.classList.remove('opacity-50');
+        thumb.classList.add('opacity-100');
+      } else {
+        thumb.classList.remove('opacity-100');
+        thumb.classList.add('opacity-50');
+      }
+    });
+  }
+
+  // Touch Swipe for Mobile Gallery
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const galleryElem = document.getElementById('gallery-container');
+
+  if (galleryElem) {
+    galleryElem.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    galleryElem.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+  }
+
+  function handleSwipe() {
+    const swipeThreshold = 40;
+    if (touchEndX < touchStartX - swipeThreshold) {
+      // Next
+      if (currentSlideIndex < totalSlides - 1) {
+        setSlide(currentSlideIndex + 1);
+      }
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+      // Prev
+      if (currentSlideIndex > 0) {
+        setSlide(currentSlideIndex - 1);
+      }
+    }
+  }
+
+  // Size Selector
+  let selectedSize = 'S';
+  function selectSize(size, btnElem) {
+    selectedSize = size;
+    document.querySelectorAll('.size-pill').forEach(btn => {
+      btn.className = "size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-surface-container text-on-surface hover:bg-surface-container-high";
+    });
+    btnElem.className = "size-pill py-3 text-center font-price-md text-price-md uppercase transition-all bg-primary text-on-primary";
+    const label = document.getElementById('selected-size-label');
+    if (label) {
+      label.innerText = `(${size} Selected)`;
+    }
+  }
+
+  // Quantity Management
+  let currentQty = 1;
+  function adjustQty(change) {
+    currentQty = Math.max(1, currentQty + change);
+    const qtyElem = document.getElementById('quantity-display');
+    if (qtyElem) {
+      qtyElem.innerText = currentQty.toString();
+    }
+  }
+
+  // Accordion Logic
+  function toggleAccordion(accId) {
+    const content = document.getElementById(accId);
+    const num = accId.split('-')[1];
+    const icon = document.getElementById(`acc-icon-${num}`);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      if (icon) icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      if (icon) icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  // Wishlist Toggle
+  let isWishlisted = false;
+  function toggleWishlist() {
+    isWishlisted = !isWishlisted;
+    const icon1 = document.getElementById('wishlist-icon');
+    const icon2 = document.getElementById('secondary-wish-icon');
+    const fillStyle = isWishlisted ? "'FILL' 1" : "'FILL' 0";
+    const iconName = isWishlisted ? 'favorite' : 'favorite_border';
+    const iconColor = isWishlisted ? 'text-secondary' : 'text-on-surface';
+
+    [icon1, icon2].forEach(icon => {
+      if (icon) {
+        icon.innerText = iconName;
+        icon.style.fontVariationSettings = fillStyle;
+        icon.className = `material-symbols-outlined text-[20px] ${iconColor}`;
+      }
+    });
+
+    showToast(isWishlisted ? 'Added to your private Wishlist' : 'Removed from Wishlist');
+  }
+
+  // Size Guide Chart Data & Logic
+  const sizeData = {
+    in: [
+      { size: 'XS', bust: '32"', waist: '26"', length: '51"' },
+      { size: 'S', bust: '34"', waist: '28"', length: '52"' },
+      { size: 'M', bust: '36"', waist: '30"', length: '52"' },
+      { size: 'L', bust: '38"', waist: '32"', length: '53"' },
+      { size: 'XL', bust: '40"', waist: '34"', length: '53"' },
+      { size: 'XXL', bust: '42"', waist: '36"', length: '54"' }
+    ],
+    cm: [
+      { size: 'XS', bust: '81 cm', waist: '66 cm', length: '129 cm' },
+      { size: 'S', bust: '86 cm', waist: '71 cm', length: '132 cm' },
+      { size: 'M', bust: '91 cm', waist: '76 cm', length: '132 cm' },
+      { size: 'L', bust: '96 cm', waist: '81 cm', length: '134 cm' },
+      { size: 'XL', bust: '101 cm', waist: '86 cm', length: '134 cm' },
+      { size: 'XXL', bust: '106 cm', waist: '91 cm', length: '137 cm' }
+    ]
+  };
+
+  let currentUnit = 'in';
+
+  function renderChart() {
+    const tbody = document.getElementById('chart-body');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    sizeData[currentUnit].forEach(row => {
+      const tr = document.createElement('tr');
+      tr.className = "border-none";
+      tr.innerHTML = `
+        <td class="py-2.5 px-3 font-semibold">${row.size}</td>
+        <td class="py-2.5 px-3">${row.bust}</td>
+        <td class="py-2.5 px-3">${row.waist}</td>
+        <td class="py-2.5 px-3">${row.length}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function setChartUnit(unit) {
+    currentUnit = unit;
+    const inBtn = document.getElementById('unit-in-btn');
+    const cmBtn = document.getElementById('unit-cm-btn');
+    if (unit === 'in') {
+      inBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase bg-primary text-on-primary";
+      cmBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase bg-transparent text-on-surface";
+    } else {
+      cmBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase bg-primary text-on-primary";
+      inBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase bg-transparent text-on-surface";
+    }
+    renderChart();
+  }
+
+  function toggleSizeGuide() {
+    const modal = document.getElementById('size-guide-modal');
+    if (modal) {
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        renderChart();
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+  }
+
+  // Toast Notifications
+  let toastTimeout;
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const label = document.getElementById('toast-message');
+    if (!toast) return;
+    if (label) label.innerText = msg;
+    toast.classList.remove('translate-y-24');
+    toast.classList.add('translate-y-0');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      hideToast();
+    }, 3200);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast');
+    if (toast) {
+      toast.classList.remove('translate-y-0');
+      toast.classList.add('translate-y-24');
+    }
+  }
+
+  function handleAddToBag() {
+    showToast(`Aubree Maxi Dress (Size ${selectedSize} × ${currentQty}) added to Bag`);
+  }
+
+  function handleBuyNow() {
+    showToast(`Proceeding to Express Checkout for Aubree Maxi Dress...`);
+  }
+
+  function quickAddLook(itemTitle) {
+    showToast(`${itemTitle} added to your Ensemble`);
+  }
+
+  // Initial render of size chart
+  renderChart();
+</script></main></body></html>

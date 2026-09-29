@@ -1,0 +1,140 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        surface: {
+          DEFAULT: "#faf9f6",
+          dim: "#dbdad7",
+          bright: "#faf9f6",
+          "container-lowest": "#ffffff",
+          "container-low": "#f4f3f0",
+          container: "#efeeeb",
+          "container-high": "#e9e8e5",
+          "container-highest": "#e3e2df",
+          variant: "#e3e2df",
+          tint: "#5f5e5e",
+        },
+        "on-surface": {
+          DEFAULT: "#1a1c1a",
+          variant: "#444748",
+        },
+        "on-background": "#1a1c1a",
+        background: "#faf9f6",
+        primary: {
+          DEFAULT: "#000000",
+          container: "#1c1b1b",
+          "on-container": "#858383",
+          fixed: "#e5e2e1",
+          "fixed-dim": "#c8c6c5",
+          "on-fixed": "#1c1b1b",
+          "on-fixed-variant": "#474746",
+        },
+        "on-primary": "#ffffff",
+        "inverse-surface": "#2f312f",
+        "inverse-on-surface": "#f2f1ee",
+        "inverse-primary": "#c8c6c5",
+        secondary: {
+          DEFAULT: "#b62419",
+          container: "#fd5845",
+          "on-container": "#5c0000",
+          fixed: "#ffdad5",
+          "fixed-dim": "#ffb4a8",
+          "on-fixed": "#410000",
+          "on-fixed-variant": "#930303",
+        },
+        "on-secondary": "#ffffff",
+        tertiary: {
+          DEFAULT: "#000000",
+          container: "#00210c",
+          "on-container": "#618e6a",
+          fixed: "#bdeec5",
+          "fixed-dim": "#a2d2aa",
+          "on-fixed": "#00210c",
+          "on-fixed-variant": "#244f31",
+        },
+        "on-tertiary": "#ffffff",
+        error: {
+          DEFAULT: "#ba1a1a",
+          container: "#ffdad6",
+          "on-container": "#93000a",
+        },
+        "on-error": "#ffffff",
+        outline: "#747878",
+        "outline-variant": "#c4c7c7",
+      },
+      fontFamily: {
+        serif: ["'Playfair Display'", "'Cormorant Garamond'", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em" }],
+        "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em" }],
+        "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "0em" }],
+        "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "0.01em" }],
+        "title-md": ["16px", { lineHeight: "24px", letterSpacing: "0.02em" }],
+        "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "0.01em" }],
+        "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0.01em" }],
+        "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.02em" }],
+        "label-lg": ["12px", { lineHeight: "16px", letterSpacing: "0.14em" }],
+        "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.18em" }],
+        "price-lg": ["18px", { lineHeight: "24px", letterSpacing: "0.02em" }],
+        "price-md": ["14px", { lineHeight: "20px", letterSpacing: "0.02em" }],
+      },
+      spacing: {
+        gutter: "1.5rem",
+        "gutter-desktop": "2.5rem",
+        margin: "1.25rem",
+        "margin-tablet": "2.5rem",
+        "margin-desktop": "5rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-lg": "2rem",
+        "space-xl": "4rem",
+        "space-2xl": "6rem",
+      },
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+      keyframes: {
+        "slide-in-right": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "slide-in-left": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "slide-up": {
+          from: { transform: "translateY(100%)" },
+          to: { transform: "translateY(0)" },
+        },
+        "toast-in": {
+          from: { transform: "translateY(120%)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        "slide-in-right": "slide-in-right 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-in-left": "slide-in-left 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+        "fade-in": "fade-in 0.3s ease-out",
+        "slide-up": "slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+        "toast-in": "toast-in 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
